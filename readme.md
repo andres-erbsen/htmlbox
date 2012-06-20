@@ -19,7 +19,8 @@ wraps the result into javascript which can decrypt it in (browser given the corr
 ## Installation
 - `git clone git://github.com/andres-erbsen/htmlbox.git`
 - `cd htmlbox`
-- `export PATH=$PATH:$(pwd)` # and maybe add this to your `.profile`
+- `export PATH=$PATH:$(pwd)`
+- Add the installation directory to your persistent path if desired - otherwise you have to repeat the last two steps in each shell you want to use it.
 
 ## Usage
 - Encrypt `secret.html` using password `whocares` and save the results to `attatchment.html` by executing:
