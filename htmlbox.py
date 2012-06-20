@@ -5,9 +5,11 @@ from os            import urandom
 from hashlib       import sha256
 from Crypto.Cipher import AES
 from base64        import b64encode
+import sys, os
 
 def jsdecrypter(**replacements):
-    package = open('decrypter.html').read()
+    pathname = os.path.dirname(sys.argv[0])
+    package = open(os.path.join(pathname,'decrypter.html')).read()
     for key in replacements:
         package = package.replace('$%s$'%key ,replacements[key])
     return package

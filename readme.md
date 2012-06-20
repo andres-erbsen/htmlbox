@@ -16,13 +16,18 @@ wraps the result into javascript which can decrypt it in (browser given the corr
 - [PyCrypto]
 - (tested on Arch and Ubuntu Linux)
 
+## Installation
+`git clone git://github.com/andres-erbsen/htmlbox.git`
+`cd htmlbox`
+`export PATH=$PATH:$(pwd)` # and maybe add this to your `.profile`
+
 ## Usage
 - Encrypt `secret.html` using password `whocares` and save the results to `attatchment.html` by executing:
-  `cat secret.html | ./htmlbox.py whocares > attatchment.html`
+  `cat secret.html | htmlbox.py whocares > attatchment.html`
 - Use passwords `usual` and `tHe long pwd` instead:
-  `cat secret.html | ./htmlbox.py usual "tHe long pwd" > attatchment.html`
+  `cat secret.html | htmlbox.py usual "tHe long pwd" > attatchment.html`
 - Convert plaintext to a html paragraph on the go: encrypt list of running processes:
-  `ps -e | ./htmlbox.py -p whocares > ps_e.html`
+  `ps -e | htmlbox.py -p whocares > ps_e.html`
 - customize page title: `-t "Very Funny"`
 - customize password prompt: `-m "No plaintext the source, don't bother"`
 
