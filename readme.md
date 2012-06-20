@@ -1,7 +1,7 @@
 # htmlbox - encrypt HTML, decrypt in browser
 ## What htmlbox does
 Given a (HTML or plain text) file and a password, htmlbox encrypts the file and
-wraps the result into javascript which can decrypt it in (browser given the correct password, of course).
+wraps the result into javascript which can decrypt it in (browser given the correct password, of course). See an [example](http://pastehtml.com/view/c24sc3g5q.html) (the password is `xkcd`).
 
 - multiple passwords support
 - AES for encryption and SHA25 for key deriviation (from [CryptoJS])
@@ -24,7 +24,7 @@ wraps the result into javascript which can decrypt it in (browser given the corr
 - Convert plaintext to a html paragraph on the go: encrypt list of running processes:
   `ps -e | ./htmlbox.py -p whocares > ps_e.html`
 - customize page title: `-t "Very Funny"`
-- customize password prompt: `-m "No plaintext the source, don't bother*"`
+- customize password prompt: `-m "No plaintext the source, don't bother"`
 
   [Python]:   http://python.org/download/
   [CryptoJS]: https://code.google.com/p/crypto-js/
