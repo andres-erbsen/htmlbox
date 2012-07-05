@@ -27,6 +27,9 @@ wraps the result into javascript which can decrypt it in (browser given the corr
   `cat secret.html | htmlbox.py whocares > attatchment.html`
 - Use passwords `usual` and `tHe long pwd` instead:
   `cat secret.html | htmlbox.py usual "tHe long pwd" > attatchment.html`
+- Use precomputed hashes (as hex) instead of passwords:
+  `cat secret.html | htmlbox.py -H 065ec384cc2993d900b4f800a36e21f561eb0e7b6b42f73d1deacbdb90e9b633 > attatchment.html`
+- Use precomputed hashes instead of passwords:
 - Convert plaintext to a html paragraph on the go: encrypt list of running processes:
   `ps -e | htmlbox.py -p whocares > ps_e.html`
 - customize page title: `-t "Very Funny"`
